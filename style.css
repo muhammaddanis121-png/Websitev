@@ -1,0 +1,109 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile-header img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.profile-header h1 {
+    margin: 10px 0;
+    font-size: 2em;
+    color: #333;
+}
+.profile-header p {
+    font-size: 1.1em;
+    color: #666;
+}
+.profile-info {
+    margin-top: 30px;
+}
+.profile-info h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    color: #333;
+}
+.profile-info p {
+    font-size: 1.1em;
+    color: #555;
+}
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+.profile {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #ccc; /* Optional: add a border */
+    float: left;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto; /* This keeps the aspect ratio */
+    
+}
+
+h1{
+    padding: 2%;
+}
+.topnav{
+overflow: hidden;
+color: white;
+background-color: black;
+text-align: center;
+padding: 15px
+
+}
+
+.topnav a {
+
+float: center ;
+color :white ;
+
+padding: 20px 20px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.topnav a:hover {
+
+color: black;
+background-color: white;
+
+
+
+
+}
+.topnav a.active{
+color: white;
+background-color: green;
+
+}
+
+
+
+
