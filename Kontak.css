@@ -1,20 +1,97 @@
-Body {
-    font-style: italic;
-    
-
-
-
+/* Kontak.css - cleaned and improved styles */
+:root{
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --accent: #1ebea5;
+  --muted: #6b7280;
+  --text: #0f1724;
 }
 
-
-
-.Media{ 
- 
-   display: flex;
-   padding: 15px;
-    background-color: aqua;
-justify-content: center;   
+*{box-sizing: border-box}
+body{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
 }
-.Media p {
-    margin: 0 10px;
+
+/* Top navigation */
+.topnav{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  background: #0f1724;
+  padding: 12px 8px;
 }
+.topnav a{
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.topnav a:hover{
+  background: rgba(255,255,255,0.08);
+}
+.topnav a.active{
+  background: var(--accent);
+  color: white;
+}
+
+/* Page container/header */
+.container{
+  max-width: 1000px;
+  margin: 28px auto;
+  padding: 0 16px;
+}
+.page-header{
+  text-align: center;
+  margin-bottom: 18px;
+}
+.page-header h1{margin: 0 0 6px 0}
+.page-header p{margin:0;color:var(--muted)}
+
+/* Contact cards grid */
+.contacts{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+.contact-card{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 18px;
+  background: var(--card);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+  transform: translateY(18px);
+  opacity: 0;
+  transition: transform .6s cubic-bezier(.2,.9,.2,1), opacity .6s ease, box-shadow .18s ease;
+}
+.contact-card .icon{
+  font-size: 34px;
+}
+.contact-card .label{
+  font-weight: 700;
+}
+.contact-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(16,24,40,0.12);
+}
+.contact-card:active{transform: translateY(-2px)}
+
+/* small screens */
+@media (max-width:480px){
+  .topnav{padding:10px}
+  .contact-card{padding:14px}
+}
+
+/* entrance animation */
+.contact-card.in-view{transform: translateY(0);opacity:1}

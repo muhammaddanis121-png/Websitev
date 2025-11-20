@@ -1,0 +1,83 @@
+:root{
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --accent: #1ebea5;
+  --muted: #6b7280;
+  --text: #0f1724;
+}
+
+*{box-sizing: border-box}
+body{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+
+.topnav{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  background: #0f1724;
+  padding: 12px 8px;
+}
+.topnav a{
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.topnav a:hover{
+  background: rgba(255,255,255,0.08);
+}
+.topnav a.active{
+  background: var(--accent);
+  color: white;
+}
+
+
+.skills-section{
+  padding: 28px 0 40px;
+}
+.skills-title{
+  text-align: center;
+  margin-bottom: 12px;
+}
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 18px;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.skill-card{
+  background: var(--card);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transform: translateY(16px);
+  opacity: 0;
+  transition: transform .6s cubic-bezier(.2,.9,.2,1), opacity .6s ease;
+}
+.skill-icon{font-size: 36px}
+.skill-name{margin:0;font-size:18px}
+.skill-level{font-size:13px;color:var(--muted)}
+.skill-bar{height:12px;background:#f0f0f0;border-radius:999px;overflow:hidden}
+.skill-fill{height:100%;background:linear-gradient(90deg,#4caf50,#8bc34a);width:0%;transition:width .9s cubic-bezier(.2,.9,.2,1)}
+.skill-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+
+/* responsive tweaks */
+@media (max-width:900px){.skills-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:600px){.skills-grid{grid-template-columns:repeat(1,1fr)}}
+
+/* when a card enters viewport */
+.skill-card.in-view{transform: translateY(0);opacity:1}
+.skill-card.in-view .skill-fill{width: var(--pct,50%)}
