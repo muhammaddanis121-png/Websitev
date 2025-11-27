@@ -2,8 +2,8 @@
   --bg: #f7f9fc;
   --card: #ffffff;
   --accent: #1ebea5;
-  --muted: #6b7280;
-  --text: #0f1724;
+  --muted: #cbcdd1;
+  --text: #ffffff;
 }
 
 *{box-sizing: border-box}
@@ -56,6 +56,7 @@ body{
   box-shadow:0 8px 30px rgba(0,0,0,0.45);
   transform:translateY(16px);
   opacity:0;
+  
 }
 .project-card:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(0,0,0,0.6)}
 .thumb{
@@ -78,19 +79,28 @@ body{
 .wrap{max-width:1100px;margin:28px auto;padding:0 18px}
 .hero{display:flex;justify-content:space-between;align-items:center;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px}
 .hero-left h1{margin:0;font-size:28px}
-.hero-left .subtitle{color:var(--muted)}
+.hero-left .subtitle{color:black}
 .hero-right{background:linear-gradient(90deg,var(--neon2),var(--neon1));padding:20px;border-radius:8px;font-weight:800;color:#041018}
 
 .projects-neon{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px}
-.project-card-alt{display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;border:1px solid rgba(255,255,255,0.03);transform:translateY(18px);opacity:0;transition:transform .5s cubic-bezier(.2,.9,.2,1),opacity .5s,box-shadow .25s}
+.project-card-alt{display:flex;flex-direction:column;background:rgb(49, 51, 53);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;border:1px solid rgba(128,128,128,0.3);transform:translateY(18px);opacity:0;transition:transform .5s cubic-bezier(.2,.9,.2,1),opacity .5s,box-shadow .25s}
 .project-card-alt:hover{box-shadow:0 18px 50px rgba(0,0,0,0.6);transform:translateY(-6px)}
 .neon-thumb{height:140px;background-size:cover;background-position:center}
 .neon-body{padding:12px}
 .neon-body h3{margin:0 0 8px}
 .neon-body p{margin:0 0 10px;color:var(--muted)}
-.badge{display:inline-block;padding:6px 8px;background:linear-gradient(90deg,var(--neon2),var(--neon1));color:#031018;border-radius:8px;font-weight:700}
+.badge{display:inline-block;padding:6px 8px;background:linear-gradient(90deg,var(--neon2),var(--neon1));color:#dff3ff;border-radius:8px;font-weight:700}
 .project-card-alt.in-view{transform:translateY(0);opacity:1}
 
 .neon-foot{text-align:center;margin-top:20px;color:var(--muted)}
+.Title {
+
+  color:#041018
+
+
+
+}
+
 
 @media(max-width:640px){.neon-thumb{height:120px}}
+
